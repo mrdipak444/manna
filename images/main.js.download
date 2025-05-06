@@ -1,0 +1,133 @@
+// JavaScript Document
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+
+
+
+// JavaScript Document
+
+
+// ロールオーバー
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+
+//ポップアップ
+
+function OpenWin1(){
+    win=window.open("pop/qupon.html","new","width=680,height=380,scrollbars=yes");
+    win.moveTo(50,50);
+}
+
+function OpenWin2(){
+    win=window.open("pop/map1.html","new","width=680,height=500,scrollbars=yes");
+    win.moveTo(50,50);
+}
+
+
+
+//ページトップに戻る
+//指定方法 <a href="javascript:scrollToTop();">
+function pageScroll(posi) {
+	dist = posi / 6;
+	nPos = parseInt(posi - dist);
+	scrollTo(0,nPos);
+	if (nPos > 0) {
+		setTimeout("pageScroll(nPos)",10);
+	}
+}	
+
+function CloseWin(){
+    window.close();
+}
+
+var __scroll = {sp:6, fps:16, timer:0};
+function setScrollSp(sp) {
+    if(typeof sp == "number") {
+        this.__scroll.sp = sp;
+    }
+}
+function setScrollFps(fps) {
+    if(typeof fps == "number") {
+        this.__scroll.fps = fps;
+    }
+}
+function scrollToTop() {
+    pageScroll(0, 0);
+}
+function getScrollLeft() {
+    if(navigator.userAgent.indexOf("MSIE") != -1) {
+        return (document.compatMode=="CSS1Compat")?document.documentElement.scrollLeft:document.body.scrollLeft;
+    } else {
+      return (window.pageXOffset) ? window.pageXOffset : 0;
+ }
+}
+function getScrollTop() {
+    if(navigator.userAgent.indexOf("MSIE") != -1) {
+        return (document.compatMode=="CSS1Compat")?document.documentElement.scrollTop:document.body.scrollTop;
+    } else {
+      return (window.pageYOffset) ? window.pageYOffset : 0;
+ }
+}
+function pageScroll(toX, toY, cuX, cuY) {
+    clearTimeout(this.__scroll.timer);
+    toX = (!toX || toX < 0) ? 0 : toX;
+    toY = (!toY || toY < 0) ? 0 : toY;
+    cuX = (!cuX) ? 0 + getScrollLeft() : cuX;
+    cuY = (!cuY) ? 0 + getScrollTop() : cuY;
+    cuX += (toX - getScrollLeft()) / this.__scroll.sp; 
+    cuY += (toY - getScrollTop()) / this.__scroll.sp; 
+    if(cuX < 0) { cuX = 0; }
+    if(cuY < 0) {    cuY = 0;    }
+    window.scrollTo(Math.floor(cuX), Math.floor(cuY));
+    if(Math.floor(cuX) != toX || Math.floor(cuY) != toY) {
+        this.__scroll.timer = setTimeout("pageScroll("+toX+","+toY+"," +cuX+","+cuY+")",this.__scroll.sp);
+    }
+}
+
+
+
+

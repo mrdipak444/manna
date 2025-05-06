@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{	margin:0px;
+	padding:0px;
+}
+body {
+		margin: 0;
+		padding: 0;
+		line-height:1.4em;
+		color:#fff;
+		font-family:"ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+		font-size:8.5pt;
+		background-color:#feecd2;
+		text-align: center; /* IE 向けセンタリング指定 */
+		margin: 0px auto;
+}
+
+#container
+{ 
+		width:800px;
+		margin-left: auto;/* Firefox 向けセンタリング指定 */
+		margin-right: auto;
+		margin: 0 auto; 
+} 
+
+img{	border:0px;}
+
+a{
+		color:0000ff;
+		font-style:normal;
+}
+
+a:link { color: #ffffff;text-decoration:none;
+}
+
+a:visited { color: #ffffff;text-decoration:none;
+}
+
+a:hover { color: #cccccc;text-decoration:none;
+}
+
+a:active { color: #cccccc;text-decoration:none;
+}
+
+.text_back
+{
+	font-size:10pt;
+	line-height:2.2em;
+	font-weight: bold;
+	margin-right:5px;
+}
+
+/* head */
+
+.text_title
+{
+	font-size:8pt;
+	line-height:1.4em;
+	color:#000;
+	margin-left:10px;
+}
+
+/* about */
+
+.table
+{
+	margin-top:30px;
+	margin-left:15px;
+	margin-right:15px;
+	width:590px;
+}
+
+.text
+{
+	font-size:12pt;
+	line-height:1.6em;
+	color:#fff;
+	margin-left:5px;
+	width:590px;
+	
+}
+
+/* drink */
+
+.img_photo
+{
+    padding:5px 0px 5px 0px;
+}
+
+.text_drink_big
+{
+	font-size:12pt;
+	line-height:1.6em;
+	color:#000000;
+	margin-left:10px;
+}
+
+.text_drink
+{
+	font-size:11pt;
+	line-height:1.6em;
+	color:#fff;
+	margin-left:10px;
+}
+
+.text_drink02
+{
+	font-size:11pt;
+	line-height:2em;
+	color:#fff;
+	margin-left:10px;
+}
+
+
+/* spice */
+
+.text_spice
+{
+	font-size:9pt;
+	line-height:1.6em;
+	color:#000000;
+    padding:0px 5px 0px 5px;
+	width:290px;
+	background-color:#efa900;
+	
+}
+
+/* access */
+
+.text_info
+{
+	font-size:11pt;
+	line-height:1.8em;
+	color:#fff;
+	margin-left:5px;
+	width:390px;
+	
+}
+
+
+
+.text_about
+{
+	font-size:10pt;
+	line-height:1.4em;
+	color:#fff;
+	margin-top:0px;
+	margin-bottom:35px;
+	margin-left:27px;
+	width:553px;
+}
+.text_about03 {
+	font-size: 10pt;
+	line-height: 1.4em;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 35px;
+	margin-left: 27px;
+}
+
+.text_about01
+{
+		font-size:10pt;
+		line-height:1.4em;
+		color:#fff;
+		margin-top:0px;
+		margin-bottom:35px;
+		margin-left:27px;
+		width:340px;
+}
+
+.text_about02
+{
+	font-size:10pt;
+	line-height:1.4em;
+	color:#fff;
+	margin-top:0px;
+	margin-bottom:35px;
+	margin-left:27px;
+	width:553px;
+}
+
+/* REPORT */
+
+#news-cover{
+padding:39px 0px 0px 27px;
+}
+
+#news{
+margin-bottom:20px;
+width:px;
+height:110px;
+padding:20px;
+}
+
+.news1{
+width:134px;
+float:left;
+}
+.news2{
+width:550px;
+overflow:auto;
+float:left;
+}
+
+.topics{
+width:550px;
+color:#fff;
+margin-bottom:10px;
+}
+
+.topics td{padding:5px 10px 25px;}
+
+.topics-td1{
+width:90px;
+vertical-align:top;
+}
+
+/* footer */
+
+.text_b
+{
+	font-size:9pt;
+	line-height:1.4em;
+	color:#fff;
+	margin-right:10px;
+}
+
+.text_copy
+{
+	font-size:8pt;
+	line-height:1.4em;
+	color:#000;
+	margin-right:10px;
+}
